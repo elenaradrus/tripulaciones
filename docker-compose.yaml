@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+   
+  backend:
+    build: ./server
+    ports:
+      - "443:443"
+    volumes:
+      - logs:/app/logs
+      - ./server:/app
+      - /app/node_modules
+   
+  frontend:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+  mongo:
+      image: mongo
+      ports:
+        - "27018:27018"
+      command: mongod --port 27018 --bind_ip_all
+
+ 
+volumes:
+  data:
+  logs:

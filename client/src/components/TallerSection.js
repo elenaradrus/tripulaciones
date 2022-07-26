@@ -20,7 +20,7 @@ export const TallerSection = ({
     let nuevopart = participantes.concat('Anibal');
     let data = { participantes: nuevopart };
 
-    await fetch(`http://localhost:5000/tallers/inscription/${_id}`, {
+    await fetch(`http://localhost:443/tallers/inscription/${_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

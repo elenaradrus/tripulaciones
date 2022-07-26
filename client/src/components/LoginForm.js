@@ -14,7 +14,7 @@ export const LoginForm = () => {
     try {
       let data = { email, password };
 
-      await fetch('http://localhost:5000/auth/login', {
+      await fetch('http://localhost:443/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
