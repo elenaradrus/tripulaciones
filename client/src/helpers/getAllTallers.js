@@ -1,5 +1,5 @@
 export const getAllTallers = async () => {
-  const miURL = `http://localhost:5000/tallers`;
+  const miURL = `http://localhost:443/tallers`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const tallers = data.map((taller) => ({
