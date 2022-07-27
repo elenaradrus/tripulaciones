@@ -19,7 +19,6 @@ export const TallerSection = ({
     let token = tokenLS.substring(1, tokenLS.length - 1);
 
     let data = { participantes };
-
     await fetch(`http://localhost:443/tallers/inscription/${_id}`, {
       method: 'PUT',
       headers: {
