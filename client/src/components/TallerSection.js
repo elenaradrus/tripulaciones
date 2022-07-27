@@ -17,10 +17,10 @@ export const TallerSection = ({
       return;
     }
     let token = tokenLS.substring(1, tokenLS.length - 1);
-    let nuevopart = participantes.concat('Anibal');
-    let data = { participantes: nuevopart };
 
-    await fetch(`http://localhost:5000/tallers/inscription/${_id}`, {
+    let data = { participantes };
+
+    await fetch(`http://localhost:443/tallers/inscription/${_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -40,6 +40,7 @@ export const TallerSection = ({
         //   // console.log(res);
       })
       .catch((error) => console.log(error.errors));
+    // window.location.reload();
   };
 
   return (
@@ -52,7 +53,8 @@ export const TallerSection = ({
             {ubicacion}
             <Button
               buttonStyle='btn-outline'
-              buttonColor='green'
+              buttonColor='red'
+              buttonSize='medium'
               onClick={inscription}
             >
               Inscribirse
