@@ -6,7 +6,8 @@ const cors = require('cors');
 const router = express();
 const { dbConnect } = require('./database/mongo');
 
-const PORT = process.env.PORT || 433;
+const PORT = process.env.PORT || 443;
+
 router.use(cors());
 router.use(express.json());
 

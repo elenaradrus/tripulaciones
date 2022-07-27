@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useFetch } from '../../hooks';
 import { TallerSection } from '../TallerSection';
 
