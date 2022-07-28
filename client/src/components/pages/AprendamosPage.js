@@ -9,7 +9,6 @@ export const AprendamosPage = () => {
       <h1>Aprendamos</h1>
       <div className='list'>
         {data.map((categoria) => (
-
           <CategoriaCard key={categoria._id} {...categoria} />
         ))}
       </div>
