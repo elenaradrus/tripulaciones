@@ -11,6 +11,7 @@ const testSchema = new Schema(
     valoracion: { type: String },
     user_id: { type: Schema.Types.ObjectId, ref: 'User' },
     categoria: { type: Schema.Types.ObjectId, ref: 'Categoria' },
+    pregunta: { type: Schema.Types.ObjectId, ref: 'Pregunta' },
   },
   {
     timestamps: true,
