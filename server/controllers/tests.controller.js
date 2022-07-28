@@ -1,149 +1,102 @@
 const { httpError } = require('../helpers/handleError');
-const jwt = require('jsonwebtoken');
+
 const Test = require('../models/Test');
-const User = require('../models/User');
 
 const getTests = async (req, res) => {
   try {
-    const tests = await Test.find({});
+    const tests = await Test.find({})
+      .populate('user_id', {
+        nombre: 1,
+        _id: 0,
+      })
+      .populate('categoria', {
+        titulo: 1,
+        imagen: 1,
+        _id: 0,
+      });
     res.json(tests);
   } catch (err) {
     httpError(res, err);
   }
 };
 
-const getTaller = async (req, res) => {
+const getTest = async (req, res) => {
   try {
-    const tallerId = req.params.id;
+    const testId = req.params.id;
 
-    const taller = await Taller.findById(tallerId);
+    const test = await Test.findById(testId);
 
-    if (!taller) {
-      res.status(404).json({ ok: false, msg: 'Taller no encontrado' });
+    if (!test) {
+      res.status(404).json({ ok: false, msg: 'Test no encontrado' });
     }
-    res.json(taller);
+    res.json(test);
   } catch (err) {
     httpError(res, err);
   }
 };
-const createTaller = async (req, res) => {
-  const {
-    nombre,
-    tematica,
-    imparte,
-    fecha,
-    aforo,
-    participantes,
-    ubicacion,
-    media,
-  } = req.body;
+const createTest = async (req, res) => {
+  const { imagen, nombre, descripcion, nivel, valoracion, user_id, categoria } =
+    req.body;
 
   try {
-    const taller = new Taller({
+    const test = new Test({
+      imagen,
       nombre,
-      tematica,
-      imparte,
-      fecha,
-      aforo,
-      participantes,
-      ubicacion,
-      media,
+      descripcion,
+      nivel,
+      valoracion,
+      user_id,
+      categoria,
     });
-    taller.save().then(() => {
-      res.status(200).json({ ok: true, msg: 'Taller creado correctamente' });
+    test.save().then(() => {
+      res.status(200).json({ ok: true, msg: 'Test creado correctamente' });
     });
   } catch (err) {
     httpError(res, err);
   }
 };
-const updateTaller = async (req, res) => {
+const updateTest = async (req, res) => {
   try {
-    const tallerId = req.params.id;
+    const testId = req.params.id;
 
-    const taller = await Taller.findById(tallerId);
+    const test = await Test.findById(testId);
 
-    if (!taller) {
-      res.status(404).json({ ok: false, msg: 'Taller no encontrado' });
+    if (!test) {
+      res.status(404).json({ ok: false, msg: 'Test no encontrado' });
     }
 
-    const newTaller = {
+    const newTest = {
       ...req.body,
     };
-    await Taller.findByIdAndUpdate(tallerId, newTaller, {
+    await Test.findByIdAndUpdate(testId, newTest, {
       new: true,
     });
-    res.status(200).json({ ok: true, msg: 'Taller actualizado correctamente' });
+    res.status(200).json({ ok: true, msg: 'Test actualizado correctamente' });
   } catch (err) {
     httpError(res, err);
   }
 };
-const deleteTaller = async (req, res) => {
+const deleteTest = async (req, res) => {
   try {
-    const tallerId = req.params.id;
+    const testId = req.params.id;
 
-    const taller = await Taller.findById(tallerId);
+    const test = await Test.findById(testId);
 
-    if (!taller) {
-      res.status(404).json({ ok: false, msg: 'Taller no encontrado' });
+    if (!test) {
+      res.status(404).json({ ok: false, msg: 'Test no encontrado' });
     }
 
-    await Taller.findByIdAndDelete(tallerId);
-    res.json({ ok: true, msg: 'Taller eliminado correctamente' });
-  } catch (err) {
-    httpError(res, err);
-  }
-};
-const inscripcionTaller = async (req, res) => {
-  try {
-    let authorization = req.get('authorization');
-    token = authorization.substring(7);
-    const { user_id } = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findById(user_id);
-
-    const tallerId = req.params.id;
-
-    const taller = await Taller.findById(tallerId);
-
-    if (!taller) {
-      res.status(404).json({ ok: false, msg: 'Taller no encontrado' });
-    }
-    const {
-      nombre,
-      tematica,
-      imparte,
-      fecha,
-      aforo,
-      participantes,
-      ubicacion,
-      media,
-    } = req.body;
-    const usuarioActual = ` ${user.nombre} ${user.apellidos} `;
-    const newTaller = {
-      nombre,
-      tematica,
-      imparte,
-      fecha,
-      aforo,
-      participantes: [...participantes, usuarioActual],
-      ubicacion,
-      media,
-    };
-    await Taller.findByIdAndUpdate(tallerId, newTaller, {
-      new: true,
-    });
-    res
-      .status(200)
-      .json({ ok: true, msg: 'Inscripción realizada correctamente' });
+    await Test.findByIdAndDelete(testId);
+    res.json({ ok: true, msg: 'Test eliminado correctamente' });
   } catch (err) {
     httpError(res, err);
   }
 };
 
 module.exports = {
-  getTallers,
-  getTaller,
-  createTaller,
-  updateTaller,
-  deleteTaller,
-  inscripcionTaller,
+  getTests,
+  getTest,
+  createTest,
+  updateTest,
+  deleteTest,
 };
