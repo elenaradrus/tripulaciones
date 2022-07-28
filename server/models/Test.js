@@ -4,14 +4,13 @@ const { Schema, model } = mongoose;
 // El esquema
 const testSchema = new Schema(
   {
+    imagen: { type: String },
     nombre: { type: String },
-    tematica: { type: String },
-    imparte: { type: String },
-    fecha: { type: String },
-    aforo: { type: Number },
-    participantes: [{ type: String }],
-    ubicacion: { type: String },
-    media: { type: String },
+    descripcion: { type: String },
+    nivel: { type: String },
+    valoracion: { type: String },
+    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
+    categoria: { type: Schema.Types.ObjectId, ref: 'Categoria' },
   },
   {
     timestamps: true,
