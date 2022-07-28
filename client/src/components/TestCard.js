@@ -9,6 +9,7 @@ export const TestCard = ({
   valoracion,
   user_name,
   categoria,
+  pregunta,
 }) => {
   return (
     <>

@@ -11,6 +11,7 @@ export const getAllTests = async () => {
     valoracion: test.valoracion,
     user_name: test.user_id.nombre,
     categoria: test.categoria.titulo,
+    pregunta: test.pregunta,
   }));
   return tests;
 };

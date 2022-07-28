@@ -35,8 +35,16 @@ const getTest = async (req, res) => {
   }
 };
 const createTest = async (req, res) => {
-  const { imagen, nombre, descripcion, nivel, valoracion, user_id, categoria } =
-    req.body;
+  const {
+    imagen,
+    nombre,
+    descripcion,
+    nivel,
+    valoracion,
+    user_id,
+    categoria,
+    pregunta,
+  } = req.body;
 
   try {
     const test = new Test({
@@ -47,6 +55,7 @@ const createTest = async (req, res) => {
       valoracion,
       user_id,
       categoria,
+      pregunta,
     });
     test.save().then(() => {
       res.status(200).json({ ok: true, msg: 'Test creado correctamente' });

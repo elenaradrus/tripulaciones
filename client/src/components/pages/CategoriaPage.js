@@ -9,11 +9,13 @@ export const CategoriaPage = () => {
   const { data: datos } = useFetchTests();
 
   return (
-    <div>
-      <h1>{data?.titulo}</h1>
-      {datos.map((test) => (
-        <TestCard key={test._id} {...test} />
-      ))}
-    </div>
+    <>
+      <div>
+        <h1>{data?.titulo}</h1>
+        {datos.map((test) => (
+          <TestCard key={test._id} {...test} />
+        ))}
+      </div>
+    </>
   );
 };
