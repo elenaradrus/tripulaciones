@@ -1,0 +1,36 @@
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gamesLink {
+    text-decoration: none;
+    color: black;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.description {
+    grid-column: 1 / 3;
+}
+
+.name, .level, .description {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .3rem; 
+}
+
+
