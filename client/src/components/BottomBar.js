@@ -55,7 +55,7 @@ export const BottomBar = () => {
         >
           <FaUser className='bottombar_icono' />
           <p>
-            <small>Perfil</small>
+            <small className='perfil'>Perfil</small>
           </p>
         </NavLink>
       </div>

@@ -1,1 +1,8 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
 
+.categoryContainer {
+    margin-bottom: 8rem;
+}
