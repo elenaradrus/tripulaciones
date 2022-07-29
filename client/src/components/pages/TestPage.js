@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFetchOneTest } from '../../hooks';
 import { Button } from '../Button';
 import { PreguntaCard } from '../PreguntaCard';
+import './TestPage.css'
 
 export const TestPage = () => {
   const { test } = useParams();
@@ -14,19 +15,23 @@ export const TestPage = () => {
   };
   return (
     <>
-      <figure>
+      <h1>Título del test</h1>
+      <div className='imageTest'>
         <img src={imagen} alt={nombre} />
-        <figcaption>{nombre}</figcaption>
-      </figure>
-      <div>Instrucciones de texto</div>
-      <Button
-        onClick={handleOnClick}
-        buttonColor='red'
-        buttonSize='large'
-        buttonStyle='primary'
-      >
-        {nombre}
-      </Button>
+      </div>
+      <div className='instructions'>Instrucciones de texto</div>
+      <div className='buttonTest'>
+        <Button
+          onClick={handleOnClick}
+          buttonColor='red'
+          buttonSize='large'
+          buttonStyle='primary'
+        >
+          {/* {nombre} */}
+          <p className='textStartTest'>Empezar</p>
+        </Button>
+      </div>
+
     </>
   );
 };

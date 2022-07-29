@@ -1,0 +1,28 @@
+.imageTest {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.instructions {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+.buttonTest {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.textStartTest {
+    font-size: 1rem;
+    height: .5rem;
+}
+
