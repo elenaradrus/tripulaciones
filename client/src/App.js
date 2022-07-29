@@ -7,6 +7,7 @@ import {
   HomePage,
   LoginPage,
   LogrosPage,
+  PreguntaPage,
   RegisterPage,
   TestPage,
   TutorialesPage,
@@ -24,6 +25,7 @@ function App() {
         <Route path='aprendamos' element={<AprendamosPage />} />;
         <Route path='aprendamos/:id' element={<CategoriaPage />} />;
         <Route path='aprendamos/:id/:test' element={<TestPage />} />;
+        <Route path='pregunta/:id' element={<PreguntaPage />} />;
         <Route path='logros' element={<LogrosPage />} />;
         <Route path='tutoriales' element={<TutorialesPage />} />;
         <Route path='/*' element={<HomePage />} />;

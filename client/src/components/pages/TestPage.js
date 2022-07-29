@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFetchOneTest } from '../../hooks';
 import { Button } from '../Button';
 import { PreguntaCard } from '../PreguntaCard';
@@ -7,10 +7,10 @@ import { PreguntaCard } from '../PreguntaCard';
 export const TestPage = () => {
   const { test } = useParams();
   const { data } = useFetchOneTest(test);
-  console.log(data);
+  const navigate = useNavigate();
   const { imagen, nombre, pregunta } = data;
   const handleOnClick = () => {
-    console.log(pregunta);
+    navigate(`../../../pregunta/${pregunta}`, { replace: true });
   };
   return (
     <>

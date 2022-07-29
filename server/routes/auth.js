@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { check } = require('express-validator');
 
-const { login } = require('../controllers/auth.controller');
+const { login, revToken } = require('../controllers/auth.controller');
 const { validarCampos } = require('../middlewares/validarCampos');
 
 router.post(
@@ -18,5 +18,5 @@ router.post(
   ],
   login
 );
-
+router.get('/revToken', revToken);
 module.exports = router;
