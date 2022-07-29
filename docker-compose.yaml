@@ -20,13 +20,6 @@ services:
     tty: true
     depends_on:
       - server
-  mongo:
-      image: mongo
-      ports:
-        - "27018:27018"
-      command: mongod --port 27018 --bind_ip_all
-
- 
 volumes:
   data:
   logs:

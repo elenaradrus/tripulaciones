@@ -1,0 +1,35 @@
+
+
+.topicsToLearn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem; 
+}
+
+.topicsLink {
+    text-decoration: none;
+    color: black;
+}
+
+.topics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.topicTitle {
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+
+
+
+

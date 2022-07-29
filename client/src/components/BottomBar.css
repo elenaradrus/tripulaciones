@@ -1,8 +1,39 @@
-.container_bottombar{
-    display:flex;
+.container_bottombar {
+    display: flex;
     justify-content: space-around;
-    position: fixed ;
-       bottom: 0 ;
-       width: 100vw ;
-    
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 1rem;
+    margin-left: -.5rem;
+
+}
+
+.bottombar_icono {
+    color: black;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+small {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    margin-top: .4rem;
 }
