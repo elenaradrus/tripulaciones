@@ -45,9 +45,12 @@ export const LoginForm = () => {
   };
 
   return (
-    <>
-      <form onSubmit={loginSubmit}>
-        <div className=''>
+    <div className='contenedorLoginEntero'>
+       
+          <img className="loginLogo" src='/images/young_female.jpg' alt='young female' />
+        
+      <form className="formularioLogin" onSubmit={loginSubmit}>
+        <div className='inputCorreo'>
           <input
             type='text'
             className=''
@@ -57,7 +60,7 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='inputContrasena'>
           <input
             type='password'
             className=''
@@ -67,8 +70,14 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
+        {/* esto es el maldito switch */}
+        <label class="switch">
+  <input type="checkbox" checked/>
+  <span class="slider round"></span>
+</label>
         <div className=''>
-          <input type='submit' className='' value='Login' />
+      
+          <input type='submit' className='botonLogin' value='Login' />
         </div>
       </form>
       <div>
@@ -82,6 +91,6 @@ export const LoginForm = () => {
         </Button>
       </div>
       {mensaje}
-    </>
+    </div>
   );
 };
