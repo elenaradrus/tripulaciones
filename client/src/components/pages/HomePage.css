@@ -11,3 +11,38 @@ img {
     max-width: 400px;
     max-height: 200px;
 }
+
+
+
+.contenedorPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorImagen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+.recomendaciones{
+    display: flex;
+    justify-content: center;
+
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+}
