@@ -71,13 +71,13 @@ export const LoginForm = () => {
           />
         </div>
         {/* esto es el maldito switch */}
-        <label class="switch">
-  <input type="checkbox" checked/>
-  <span class="slider round"></span>
-</label>
-        <div className=''>
+        <div className='checkYLabel'>
+        <input className='recordarContrasena' type="checkbox" id="switch" />
+        <label for="switch">Recordar contraseña</label>
+        </div>
+        <div className='botonLogin'>
       
-          <input type='submit' className='botonLogin' value='Login' />
+          <input type='submit' className='' value='Login' />
         </div>
       </form>
       <div>
@@ -91,6 +91,9 @@ export const LoginForm = () => {
         </Button>
       </div>
       {mensaje}
+      <div className='llevarAlRegistro'>
+        ¿PRIMERA VEZ? <br></br> REGÍSTRATE
+      </div>
     </div>
   );
 };
