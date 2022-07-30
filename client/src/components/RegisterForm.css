@@ -1,0 +1,40 @@
+
+
+
+.contenedorGrandeRegistro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonRegistro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.registroNombre{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.registroApellidos{
+    margin-bottom: 10px;
+}
+.registroCorreo{
+    margin-bottom: 10px;
+}
+
+.registroContrasena{
+    margin-bottom: 10px;
+}
+
+.registroDireccion{
+    margin-bottom: 10px;
+}
+
+.registroTelefono{
+    margin-bottom: 10px;
+}
+

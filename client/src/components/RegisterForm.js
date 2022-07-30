@@ -50,9 +50,12 @@ export const RegisterForm = () => {
     }
   };
   return (
-    <>
+    <div className='contenedorGrandeRegistro'>
+    <div className='mensajePrincipal'>
+      <h3>¡Estás a un paso de la digitalización!</h3>
+    </div>
       <form onSubmit={loginSubmit}>
-        <div className=''>
+        <div className='registroNombre'>
           <input
             type='text'
             className=''
@@ -62,7 +65,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroApellidos'>
           <input
             type='text'
             className=''
@@ -72,7 +75,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroCorreo'>
           <input
             type='text'
             className=''
@@ -82,7 +85,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroContrasena'>
           <input
             type='password'
             className=''
@@ -92,7 +95,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroDireccion'>
           <input
             type='text'
             className=''
@@ -102,7 +105,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroTelefono'>
           <input
             type='text'
             className=''
@@ -112,11 +115,22 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+
+        <div className='registroRepetirContrasena'>
+          <input
+            type='text'
+            className=''
+            placeholder='Repetir contraseña'
+            name='repetirContrasena'
+            //value={telefono}
+            onChange={onInputChange}
+          />
+        </div>
+        <div className='botonRegistro'>
           <input type='submit' className='' value='Login' />
         </div>
       </form>
       {mensaje}
-    </>
+    </div>
   );
 };

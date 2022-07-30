@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from './Button';
+import './PreguntaCard.css';
 
 export const PreguntaCard = ({
   detalle,
@@ -15,16 +16,16 @@ export const PreguntaCard = ({
 
   return (
     <>
-      <div>
-        <h2>{detalle}</h2>
-        <p>{texto}</p>
-        <ul>
+      <div className='container-questions'>
+        {/* <h2>{detalle}</h2> */}
+        <p className='questionDetail'>{texto}</p>
+        <ul className='questionOptions'>
           <li>Opcion 1 : {opcion1}</li>
           <li>Opcion 2 : {opcion2}</li>
           <li>Opcion 3 : {opcion3}</li>
           <li>Opcion 4 : {opcion4}</li>
         </ul>
-        <div>
+        <div className='questionButtons'>
           <Button
             onClick={() => {
               setAnswer(respuesta === opcion1);
