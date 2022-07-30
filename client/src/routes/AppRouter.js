@@ -8,7 +8,6 @@ import {
   Page404,
   PerfilPage,
   PreguntaPage,
-  RegisterPage,
   TestPage,
   TutorialesPage,
 } from '../components/pages';

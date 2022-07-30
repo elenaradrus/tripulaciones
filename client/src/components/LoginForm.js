@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import { signInWithGoogle } from '../helpers/firebase';
 import { useForm } from '../hooks';
@@ -47,10 +47,13 @@ export const LoginForm = () => {
 
   return (
     <div className='contenedorLoginEntero'>
-       
-          <img className="loginLogo" src='/images/young_female.jpg' alt='young female' />
-        
-      <form className="formularioLogin" onSubmit={loginSubmit}>
+      <img
+        className='loginLogo'
+        src='/images/young_female.jpg'
+        alt='young female'
+      />
+
+      <form className='formularioLogin' onSubmit={loginSubmit}>
         <div className='inputCorreo'>
           <input
             type='text'
@@ -73,15 +76,14 @@ export const LoginForm = () => {
         </div>
         {/* esto es el maldito switch */}
         <div className='checkYLabel'>
-        <input className='recordarContrasena' type="checkbox" id="switch" />
-        <label for="switch">Recordar contraseña</label>
+          <input className='recordarContrasena' type='checkbox' id='switch' />
+          <label for='switch'>Recordar contraseña</label>
         </div>
         <div className='botonLogin'>
-      
           <input type='submit' className='' value='Login' />
         </div>
       </form>
-      <div>
+      {/* <div>
         <Button
           onClick={signInWithGoogle}
           buttonStyle='btn--primary'
@@ -90,18 +92,13 @@ export const LoginForm = () => {
         >
           Login con Google
         </Button>
-      </div>
-      {mensaje}
+      </div> */}
+
       <div className='llevarAlRegistro'>
-      <Button
-                onClick={() => <Link to='/promociones' />
-                    }
-                name='MANDAR A dejar lo de anibal.'       
-            />
-        
-        
-        ¿PRIMERA VEZ? <br></br> REGÍSTRATE
+        ¿PRIMERA VEZ? <br></br>
       </div>
+      <Link to='registro'>REGÍSTRATE</Link>
+      {mensaje}
     </div>
   );
 };

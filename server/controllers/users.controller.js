@@ -27,8 +27,21 @@ const getUser = async (req, res) => {
   }
 };
 const createUser = async (req, res) => {
-  const { nombre, apellidos, email, password, direccion, telefono, role } =
-    req.body;
+  const {
+    nombre,
+    apellidos,
+    email,
+    password,
+    telefono,
+    role,
+    provincia,
+    edad,
+    socio,
+    futurosocio,
+    cuota,
+    nivelDig,
+    nivelEdu,
+  } = req.body;
 
   try {
     const user = new User({
@@ -36,9 +49,15 @@ const createUser = async (req, res) => {
       apellidos,
       email,
       password: await encrypt(password),
-      direccion,
       telefono,
       role: 'user',
+      provincia,
+      edad,
+      socio,
+      futurosocio,
+      cuota,
+      nivelDig,
+      nivelEdu,
     });
     user.save().then(() => {
       res.status(200).json({ ok: true, msg: 'Usuario creado correctamente' });

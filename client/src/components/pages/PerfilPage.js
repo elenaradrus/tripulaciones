@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
-
+import { FormExtra } from '../FormExtra';
+import './PerfilPage.css';
 export const PerfilPage = () => {
   const { user } = useContext(UserContext);
 
@@ -21,6 +22,10 @@ export const PerfilPage = () => {
         <p>
           <b>Teléfono:</b> {user?.telefono}
         </p>
+      </div>
+
+      <div className='form_extra'>
+        <FormExtra />
       </div>
     </>
   );
