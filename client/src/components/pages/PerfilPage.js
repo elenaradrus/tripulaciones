@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 
+import { Button } from '../Button';
+
 export const PerfilPage = () => {
   const { user } = useContext(UserContext);
 
@@ -21,6 +23,16 @@ export const PerfilPage = () => {
         <p>
           <b>Teléfono:</b> {user?.telefono}
         </p>
+      </div>
+
+      <div>
+        <Button
+          buttonStyle='btn--primary'
+          buttonColor='blue'
+          buttonSize='large'
+        >
+          Login con Google
+        </Button>
       </div>
     </>
   );
