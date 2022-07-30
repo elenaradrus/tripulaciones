@@ -1,5 +1,5 @@
 export * from './useForm';
-export * from './useFetch';
+export * from './useFetchTutorial';
 export * from './useFetchCategoria';
 export * from './useFetchOneCategoria';
 export * from './useFetchOneTest';

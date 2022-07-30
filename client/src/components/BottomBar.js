@@ -15,7 +15,7 @@ export const BottomBar = () => {
       <div className='container_bottombar'>
         <NavLink
           className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-          to='/'
+          to='/home'
         >
           <FaHome className='bottombar_icono' />
           <p>
@@ -51,7 +51,7 @@ export const BottomBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-          to='/login'
+          to='/perfil'
         >
           <FaUser className='bottombar_icono' />
           <p>
