@@ -23,3 +23,13 @@
     gap: 1rem;
 }
 
+@media (min-width: 768px) {
+    .container-questions {
+        display: flex;
+        flex-direction: column;
+        margin-left: 22rem;
+        margin-top: 5rem;
+        width: 50%;
+    }
+}
+

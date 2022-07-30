@@ -1,22 +1,28 @@
 
-
+.mensajePrincipal{
+    display: flex;
+}
 
 .contenedorGrandeRegistro {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  
 }
 
 .botonRegistro{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    
 }
 
 .registroNombre{
     margin-top:10px;
     margin-bottom: 10px;
+
+    
 }
 
 .registroApellidos{
@@ -24,10 +30,12 @@
 }
 .registroCorreo{
     margin-bottom: 10px;
+   
 }
 
 .registroContrasena{
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .registroDireccion{
@@ -38,3 +46,23 @@
     margin-bottom: 10px;
 }
 
+
+
+
+
+/* INPUT, PERO LO ESTÁ CAMBIANDO A TODOS!!!!! INCLUSO A LOS BOTONES! */
+input{
+    border:solid black 3px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 10px;
+}
+/* Esto es para que desapareezca el place holder al escribir */
+input:focus::placeholder{
+    color: transparent;
+}
+
+input::placeholder{
+    color: black;
+    transition:color 0.3s ease;
+}

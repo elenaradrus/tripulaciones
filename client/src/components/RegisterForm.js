@@ -65,7 +65,7 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className='registroApellidos'>
+       {/*  <div className='registroApellidos'>
           <input
             type='text'
             className=''
@@ -74,7 +74,7 @@ export const RegisterForm = () => {
             value={apellidos}
             onChange={onInputChange}
           />
-        </div>
+        </div> */}
         <div className='registroCorreo'>
           <input
             type='text'
@@ -95,7 +95,17 @@ export const RegisterForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className='registroDireccion'>
+        <div className='registroContrasena'>
+          <input
+            type='password'
+            className=''
+            placeholder='Repetir contraseña'
+            //name='password'
+            //value={password}
+            //onChange={onInputChange}
+          />
+        </div>
+       {/*  <div className='registroDireccion'>
           <input
             type='text'
             className=''
@@ -104,8 +114,8 @@ export const RegisterForm = () => {
             value={direccion}
             onChange={onInputChange}
           />
-        </div>
-        <div className='registroTelefono'>
+        </div> */}
+       {/*  <div className='registroTelefono'>
           <input
             type='text'
             className=''
@@ -114,20 +124,11 @@ export const RegisterForm = () => {
             value={telefono}
             onChange={onInputChange}
           />
-        </div>
+        </div> */}
 
-        <div className='registroRepetirContrasena'>
-          <input
-            type='text'
-            className=''
-            placeholder='Repetir contraseña'
-            name='repetirContrasena'
-            //value={telefono}
-            onChange={onInputChange}
-          />
-        </div>
+        
         <div className='botonRegistro'>
-          <input type='submit' className='' value='Registrarse' />
+          <input type='submit' className='' value='REGISTRARSE' />
         </div>
       </form>
       {mensaje}

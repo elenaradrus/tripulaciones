@@ -6,7 +6,7 @@
     margin-bottom: 1rem;
 }
 
-img {
+.testCardImg {
     max-width: 100%;
 }
 
@@ -31,6 +31,14 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: .3rem; 
+}
+
+@media (min-width: 768px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
