@@ -13,7 +13,6 @@ export const PreguntaPage = () => {
         <h1>Pregunta #1</h1>
         <PreguntaCard {...data} />
       </div>
-
     </>
   );
 };

@@ -30,7 +30,7 @@ export const LoginForm = () => {
           onResetForm();
           setUser(res.user);
           if (res.ok) {
-            navigate('/');
+            navigate('/home');
           } else {
             setMensaje(res.msg);
           }
