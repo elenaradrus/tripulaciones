@@ -4,6 +4,7 @@ import { UserContext } from '../context/UserContext';
 import { signInWithGoogle } from '../helpers/firebase';
 import { useForm } from '../hooks';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
 import './LoginForm.css';
 export const LoginForm = () => {
@@ -92,6 +93,13 @@ export const LoginForm = () => {
       </div>
       {mensaje}
       <div className='llevarAlRegistro'>
+      <Button
+                onClick={() => <Link to='/promociones' />
+                    }
+                name='MANDAR A dejar lo de anibal.'       
+            />
+        
+        
         ¿PRIMERA VEZ? <br></br> REGÍSTRATE
       </div>
     </div>
