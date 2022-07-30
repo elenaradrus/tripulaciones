@@ -1,0 +1,25 @@
+.container-questions {
+    height: 100vh;
+}
+
+
+.questionDetail {
+    border: 1px solid black;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.questionOptions {
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.questionButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
