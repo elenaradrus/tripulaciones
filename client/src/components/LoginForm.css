@@ -1,0 +1,44 @@
+.contenedorLoginEntero {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.inputCorreo{
+    display: flex;
+    margin: 10px;
+}
+
+.inputContrasena{
+    display: flex;
+    margin: 10px;
+}
+
+.formularioLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.botonLogin{
+  display: flex;
+}
+
+
+.recordarContrasena{
+  display:flex
+}
+
+.checkYLabel{
+  display: flex;
+  margin: 10px;
+
+}
+.llevarAlRegistro{
+  margin-top: 50px;
+}

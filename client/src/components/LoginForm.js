@@ -45,9 +45,12 @@ export const LoginForm = () => {
   };
 
   return (
-    <>
-      <form onSubmit={loginSubmit}>
-        <div className=''>
+    <div className='contenedorLoginEntero'>
+       
+          <img className="loginLogo" src='/images/young_female.jpg' alt='young female' />
+        
+      <form className="formularioLogin" onSubmit={loginSubmit}>
+        <div className='inputCorreo'>
           <input
             type='text'
             className=''
@@ -57,7 +60,7 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='inputContrasena'>
           <input
             type='password'
             className=''
@@ -67,7 +70,13 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        {/* esto es el maldito switch */}
+        <div className='checkYLabel'>
+        <input className='recordarContrasena' type="checkbox" id="switch" />
+        <label for="switch">Recordar contraseña</label>
+        </div>
+        <div className='botonLogin'>
+      
           <input type='submit' className='' value='Login' />
         </div>
       </form>
@@ -82,6 +91,9 @@ export const LoginForm = () => {
         </Button>
       </div>
       {mensaje}
-    </>
+      <div className='llevarAlRegistro'>
+        ¿PRIMERA VEZ? <br></br> REGÍSTRATE
+      </div>
+    </div>
   );
 };
