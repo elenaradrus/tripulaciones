@@ -17,7 +17,7 @@ export const TestCard = ({
       <Link to={_id} className='gamesLink'>
         <div className='mainContainer'>
           <div className='image'>
-            <img src={imagen} alt={nombre} />
+            <img className='testCardImg' src={imagen} alt={nombre} />
           </div>
 
           <div className='information'>

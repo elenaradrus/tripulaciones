@@ -5,9 +5,6 @@
     align-items: center;
 }
 
-img{
-    border-radius: 50%;
-}
 
 .inputCorreo{
     display: flex;

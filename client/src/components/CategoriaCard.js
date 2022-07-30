@@ -8,7 +8,7 @@ export const CategoriaCard = ({ _id, titulo, imagen }) => {
         <div className='topicsToLearn'>
 
           <div className='topics'>
-            <img src={imagen} alt={titulo} />
+            <img className='categoryCardImg' src={imagen} alt={titulo} />
             <div className='topicTitle'>{titulo}</div>
           </div>
         </div>

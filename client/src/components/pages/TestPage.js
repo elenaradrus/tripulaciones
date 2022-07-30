@@ -16,10 +16,13 @@ export const TestPage = () => {
   return (
     <>
       <h1>Título del test</h1>
-      <div className='imageTest'>
-        <img src={imagen} alt={nombre} />
+      <div className='testPageContainer'>
+        <div className='imageTest'>
+          <img className='testPageImg' src={imagen} alt={nombre} />
+        </div>
+        <div className='instructions'>Instrucciones de texto</div>
       </div>
-      <div className='instructions'>Instrucciones de texto</div>
+
       <div className='buttonTest'>
         <Button
           onClick={handleOnClick}
