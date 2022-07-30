@@ -51,9 +51,9 @@ export const RegisterForm = () => {
   };
   return (
     <div className='contenedorGrandeRegistro'>
-    <div className='mensajePrincipal'>
-      <h3>¡Estás a un paso de la digitalización!</h3>
-    </div>
+      <div className='mensajePrincipal'>
+        <h3>¡Estás a un paso de la digitalización!</h3>
+      </div>
       <form onSubmit={loginSubmit}>
         <div className='registroNombre'>
           <input
@@ -127,7 +127,7 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='botonRegistro'>
-          <input type='submit' className='' value='Login' />
+          <input type='submit' className='' value='Registrarse' />
         </div>
       </form>
       {mensaje}
