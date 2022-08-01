@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-import { signInWithGoogle } from '../helpers/firebase';
 import { useForm } from '../hooks';
 import { Button } from './Button';
 
@@ -86,16 +85,6 @@ export const LoginForm = () => {
           <input type='submit' className='' value='Login' />
         </div>
       </form>
-      {/* <div>
-        <Button
-          onClick={signInWithGoogle}
-          buttonStyle='btn--primary'
-          buttonColor='blue'
-          buttonSize='large'
-        >
-          Login con Google
-        </Button>
-      </div> */}
 
       <div className='llevarAlRegistro'>
         ¿PRIMERA VEZ? <br></br>
