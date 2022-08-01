@@ -55,11 +55,10 @@ export const RegisterForm = () => {
       <div className='mensajePrincipal'>
         <h3>¡Estás a un paso de la digitalización!</h3>
       </div>
-      <form onSubmit={loginSubmit}>
+      <form className='formularioRegistroEntero' onSubmit={loginSubmit}>
         <div className='registroNombre'>
-          <input
+          <input id='nombreRegistro'
             type='text'
-            className=''
             placeholder='Nombre'
             name='nombre'
             value={nombre}
@@ -114,7 +113,7 @@ export const RegisterForm = () => {
         </div> 
         <div className='eresSocio'>
         
-        <Link to='#'> Acepto cookies y condiciones</Link>
+        <Link to='condiciones'> Aceptar términos legales</Link>
         <input type="checkbox" id="eresSocio"  value="Socio"/>
 
         </div> 

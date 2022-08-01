@@ -11,6 +11,7 @@ import {
   TestPage,
   TutorialesPage,
 } from '../components/pages';
+import { CondicionesPage } from '../components/pages/CondicionesPage';
 
 export const AppRouter = () => {
   return (
@@ -26,6 +27,9 @@ export const AppRouter = () => {
         <Route path='noencontrada' element={<Page404 />} />;
         <Route path='perfil' element={<PerfilPage />} />;
         <Route path='/*' element={<Navigate to='noencontrada' />} />;
+        <Route path='condiciones' element={<CondicionesPage />} />;
+
+        
       </Routes>
       <BottomBar />
     </>
