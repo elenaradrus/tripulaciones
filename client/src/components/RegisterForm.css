@@ -1,4 +1,5 @@
 
+
 .mensajePrincipal{
     display: flex;
 }
@@ -8,6 +9,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height:100vh;
+    gap: 30px;
+    background: rgb(31, 50, 98);
+    background: linear-gradient(90deg, rgba(31, 50, 98, 1) 0%, rgba(74, 77, 155, 1) 31%, rgba(73, 188, 196, 1) 100%);
   
 }
 
@@ -18,42 +23,52 @@
     
 }
 
+
 .registroNombre{
     margin-top:10px;
     margin-bottom: 10px;
-
+    border-color: #4A4D9B;
+  
+   
     
 }
 
 .registroApellidos{
     margin-bottom: 10px;
+    border-color: #4A4D9B;
 }
 .registroCorreo{
     margin-bottom: 10px;
-   
+    border-color: #4A4D9B;
 }
 
 .registroContrasena{
     margin-bottom: 10px;
     border-radius: 5px;
+    border-color: #4A4D9B;
+    
 }
 
 .registroDireccion{
     margin-bottom: 10px;
+    border-color: #4A4D9B;
 }
 
 .registroTelefono{
     margin-bottom: 10px;
+    border-color: #4A4D9B;
+ 
 }
 
-
+.botonRegistrarse{
+    display: flex;
+}
 
 
 
 /* INPUT, PERO LO ESTÁ CAMBIANDO A TODOS!!!!! INCLUSO A LOS BOTONES! */
 input{
-    border:solid black 3px;
-    border-radius: 10px;
+    border-color: #4A4D9B;    border-radius: 10px;
     background: #f2f2f2;
     padding: 10px;
 }

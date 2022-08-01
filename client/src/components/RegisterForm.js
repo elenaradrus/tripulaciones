@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks';
+import { Link } from 'react-router-dom';
 
 import './RegisterForm.css';
 export const RegisterForm = () => {
@@ -78,7 +79,7 @@ export const RegisterForm = () => {
         <div className='registroCorreo'>
           <input
             type='text'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Correo'
             name='email'
             value={email}
@@ -88,7 +89,7 @@ export const RegisterForm = () => {
         <div className='registroContrasena'>
           <input
             type='password'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Contraseña'
             name='password'
             value={password}
@@ -96,9 +97,9 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='registroContrasena'>
-          <input
+          <input className="inputContrasenaRegistro"
             type='password'
-            className=''
+            
             placeholder='Repetir contraseña'
             //name='password'
             //value={password}
@@ -106,11 +107,17 @@ export const RegisterForm = () => {
           />
         </div>
 
-        { <div className='eresSocio'>
+         <div className='eresSocio'>
         <label for="eresSocio"> Soy socio</label>
         <input type="checkbox" id="eresSocio"  value="Socio"/>
 
-        </div> }
+        </div> 
+        <div className='eresSocio'>
+        
+        <Link to='#'> Acepto cookies y condiciones</Link>
+        <input type="checkbox" id="eresSocio"  value="Socio"/>
+
+        </div> 
 
 
 
@@ -136,9 +143,14 @@ export const RegisterForm = () => {
         </div> */}
 
         
-        <div className='botonRegistro'>
-          <input type='submit' className='' value='REGISTRARSE' />
-        </div>
+<div className='botonRegistrarse'>
+        <button class="btn btn--primary btn-medium orange">
+        <p className='botonAcceder'>REGISTRARSE</p>  
+        </button>
+</div>
+
+
+        
       </form>
       {mensaje}
     </div>
