@@ -6,6 +6,7 @@ export const getAllCategorias = async () => {
     _id: categoria._id,
     titulo: categoria.titulo,
     imagen: categoria.imagen,
+    icono: categoria.icono,
   }));
   return categorias;
 };

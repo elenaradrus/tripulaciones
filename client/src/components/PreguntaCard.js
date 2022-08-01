@@ -18,13 +18,19 @@ export const PreguntaCard = ({
     <>
       <div className='container-questions'>
         {/* <h2>{detalle}</h2> */}
-        <p className='questionDetail'>{texto}</p>
-        <ul className='questionOptions'>
-          <li>Opcion 1 : {opcion1}</li>
-          <li>Opcion 2 : {opcion2}</li>
-          <li>Opcion 3 : {opcion3}</li>
-          <li>Opcion 4 : {opcion4}</li>
-        </ul>
+        <div className='containerText'>
+          <p className='questionDetail'>{texto}</p>
+        </div>
+
+        <div className='containerOptions'>
+          <ul className='questionOptions'>
+            <li>Opcion 1 : {opcion1}</li>
+            <li>Opcion 2 : {opcion2}</li>
+            <li>Opcion 3 : {opcion3}</li>
+            <li>Opcion 4 : {opcion4}</li>
+          </ul>
+        </div>
+
         <div className='questionButtons'>
           <Button
             onClick={() => {
@@ -68,8 +74,8 @@ export const PreguntaCard = ({
             {answer
               ? `Correcto!!! ${respuesta}`
               : wrong
-              ? 'Te has equivocado'
-              : ''}
+                ? 'Te has equivocado'
+                : ''}
           </p>
         </div>
       </div>
