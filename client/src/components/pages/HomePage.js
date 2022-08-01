@@ -2,7 +2,7 @@ import './HomePage.css';
 export const HomePage = () => {
   return (
     <div className='contenedorPrincipal'>
-      <h1 className='titulo'>EMANCIPATIC</h1>
+      <h1 className='titulo'>Bienvenido</h1>
       <div className='contenedorImagen'>
         <figure>
           <img src='/images/young_female.jpg' alt='young female' />

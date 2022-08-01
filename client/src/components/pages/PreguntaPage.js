@@ -10,7 +10,7 @@ export const PreguntaPage = () => {
   return (
     <>
       <div className='questionsContainer'>
-        <h1>Pregunta #1</h1>
+        <h2 className='numPregunta'>Pregunta #1</h2>
         <PreguntaCard {...data} />
       </div>
     </>
