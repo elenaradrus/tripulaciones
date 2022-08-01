@@ -5,6 +5,7 @@ import { signInWithGoogle } from '../helpers/firebase';
 import { useForm } from '../hooks';
 import { Button } from './Button';
 
+
 import './LoginForm.css';
 export const LoginForm = () => {
   const { setUser } = useContext(UserContext);
@@ -46,16 +47,19 @@ export const LoginForm = () => {
 
   return (
     <div className='contenedorLoginEntero'>
-      <img
+     <img
         className='loginLogo'
-        src='/images/young_female.jpg'
+        src='/images/logoEmancipatic.png'
         alt='young female'
-      />
+      /> 
 
       <form className='formularioLogin' onSubmit={loginSubmit}>
         <div className='inputCorreo'>
+        <label for="html">Usuario 
+       </label>
+
           <input
-            type='text'
+            type='email'
             className=''
             placeholder='Correo'
             name='email'
