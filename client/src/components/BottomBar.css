@@ -25,19 +25,95 @@ small {
 }
 
 
-.nav-link {
+.home-link {
     text-decoration: none;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: url('/public/images/dark_home.svg');
+    min-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+    
+}
+.active-home {
+    color:#FF9E0F;
+    background-image: url('/public/images/light_home.svg');
+}
+
+.tutoriales-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/public/images/dark_tutoriales.svg');
+    min-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+.active-tutoriales {
+    color:#FF9E0F;
+    background-image: url('/public/images/light_tutoriales.svg');
+}
+.aprendamos-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/public/images/dark_aprendamos.svg');
+    min-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+.active-aprendamos {
+    color:#FF9E0F;
+    background-image: url('/public/images/light_aprendamos.svg');
+}
+.logros-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/public/images/dark_logros.svg');
+    min-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+.active-logros {
+    color:#FF9E0F;
+    background-image: url('/public/images/light_logros.svg');
+}
+.perfil-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/public/images/dark_perfil.svg');
+    min-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+.active-perfil {
+    color:#FF9E0F;
+    background-image: url('/public/images/light_perfil.svg');
 }
 
 p {
     margin-top: .4rem;
 }
-.active{
-    color: red;
-    
+.iconos_bb{
+    min-width: 40px;
+    min-height: 40px;
+    margin-bottom: 5px;
 }
+
