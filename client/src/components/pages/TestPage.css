@@ -1,7 +1,8 @@
 .titleTestPage {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding-right: 6rem;
     color: white;
     background: rgb(31, 50, 98);
     background: linear-gradient(90deg, rgba(31, 50, 98, 1) 0%, rgba(74, 77, 155, 1) 31%, rgba(73, 188, 196, 1) 100%);
