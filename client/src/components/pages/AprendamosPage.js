@@ -12,6 +12,7 @@ export const AprendamosPage = () => {
           <CategoriaCard key={categoria._id} {...categoria} />
         ))}
       </div>
+      
 
     </>
   );

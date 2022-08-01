@@ -6,6 +6,7 @@ const categoriaSchema = new Schema(
   {
     titulo: { type: String },
     imagen: { type: String },
+    icono: { type: String },
   },
   {
     timestamps: true,

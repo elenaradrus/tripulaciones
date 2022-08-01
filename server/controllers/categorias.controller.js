@@ -26,12 +26,13 @@ const getCategoria = async (req, res) => {
   }
 };
 const createCategoria = async (req, res) => {
-  const { titulo, imagen } = req.body;
+  const { titulo, imagen, icono } = req.body;
 
   try {
     const categoria = new Categoria({
       titulo,
       imagen,
+      icono
     });
     categoria.save().then(() => {
       res.status(200).json({ ok: true, msg: 'Categoría creada correctamente' });
