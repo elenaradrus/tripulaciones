@@ -112,6 +112,10 @@ export const FormExtra = () => {
     }
   };
   return (
+
+    <></>
+
+    /* 
     <form className='container' onSubmit={loginSubmit}>
       <label>Edad</label>
       <Select
@@ -136,7 +140,8 @@ export const FormExtra = () => {
         defaultValue={futurosocio}
         onChange={handleChangeFuturoSocio}
         options={captacion}
-      />
+      /> 
+
       <label>Prefieres la cuota Anual o Semestral</label>
       <Select
         defaultValue={cuota}
@@ -165,5 +170,5 @@ export const FormExtra = () => {
         Guardar
       </Button>
     </form>
-  );
+ */  );
 };

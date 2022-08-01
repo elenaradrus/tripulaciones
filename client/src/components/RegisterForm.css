@@ -66,3 +66,7 @@ input::placeholder{
     color: black;
     transition:color 0.3s ease;
 }
+
+.eresSocio{
+    display: flex;
+}
