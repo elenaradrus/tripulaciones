@@ -6,7 +6,7 @@ export const AprendamosPage = () => {
   const { data } = useFetchCategoria();
   return (
     <>
-      <h1>Aprendamos</h1>
+      <h2 className='aprendamosTitle'>Aprendamos</h2>
       <div className='list'>
         {data.map((categoria) => (
           <CategoriaCard key={categoria._id} {...categoria} />

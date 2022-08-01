@@ -15,7 +15,7 @@ export const TestPage = () => {
   };
   return (
     <>
-      <h1>Título del test</h1>
+      <h2 className='titleTestPage'>Detecta el...</h2>
       <div className='testPageContainer'>
         <div className='imageTest'>
           <img className='testPageImg' src={imagen} alt={nombre} />
@@ -26,12 +26,12 @@ export const TestPage = () => {
       <div className='buttonTest'>
         <Button
           onClick={handleOnClick}
-          buttonColor='red'
+          buttonColor='orange'
           buttonSize='large'
           buttonStyle='primary'
         >
           {/* {nombre} */}
-          <p className='textStartTest'>Empezar</p>
+          <p className='textStartTest'>Comenzar</p>
         </Button>
       </div>
 
