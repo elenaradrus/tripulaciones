@@ -105,6 +105,15 @@ export const RegisterForm = () => {
             //onChange={onInputChange}
           />
         </div>
+
+        { <div className='eresSocio'>
+        <label for="eresSocio"> Soy socio</label>
+        <input type="checkbox" id="eresSocio"  value="Socio"/>
+
+        </div> }
+
+
+
        {/*  <div className='registroDireccion'>
           <input
             type='text'

@@ -3,9 +3,24 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    height:100vh;
+    background: rgb(31, 50, 98);
+  background: linear-gradient(90deg, rgba(31, 50, 98, 1) 0%, rgba(74, 77, 155, 1) 31%, rgba(73, 188, 196, 1) 100%);
+  
+   
 }
 
 
+.loginLogo{
+  width: 128px;
+  height: 104.58px;
+}
+/* body{
+  background: rgb(31, 50, 98);
+  background: linear-gradient(90deg, rgba(31, 50, 98, 1) 0%, rgba(74, 77, 155, 1) 31%, rgba(73, 188, 196, 1) 100%);
+  
+}
+ */
 .inputCorreo{
     display: flex;
     margin: 10px;

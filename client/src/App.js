@@ -17,6 +17,7 @@ import { UserProvider } from './context/UserProvider';
 import { AppRouter } from './routes/AppRouter';
 import { PrivateRoute } from './routes/PrivateRoute';
 
+
 function App() {
   return (
     <UserProvider>
