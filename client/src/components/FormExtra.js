@@ -24,31 +24,24 @@ export const FormExtra = () => {
 
   const handleChangeProvincia = ({ value }) => {
     setProvincia(value);
-    console.log(value);
   };
   const handleChangeSocio = ({ value }) => {
     setSocio(value);
-    console.log(value);
   };
   const handleChangeFuturoSocio = ({ value }) => {
     setFuturosocio(value);
-    console.log(value);
   };
   const handleChangeCuota = ({ value }) => {
     setCuota(value);
-    console.log(value);
   };
   const handleChangeNivelDig = ({ value }) => {
     setNivelDig(value);
-    console.log(value);
   };
   const handleChangeNivelEdu = ({ value }) => {
     setNivelEdu(value);
-    console.log(value);
   };
   const handleChangeEdad = ({ value }) => {
     setEdad(value);
-    console.log(value);
   };
 
   const afiliacion = [
