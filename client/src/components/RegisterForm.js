@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks';
+import { Link } from 'react-router-dom';
 
 import './RegisterForm.css';
 export const RegisterForm = () => {
@@ -52,13 +53,13 @@ export const RegisterForm = () => {
   return (
     <div className='contenedorGrandeRegistro'>
       <div className='mensajePrincipal'>
+      <h2 className='mayusculas'>FORMULARIO DE NUEVO REGISTRO</h2>
         <h3>¡Estás a un paso de la digitalización!</h3>
       </div>
-      <form onSubmit={loginSubmit}>
+      <form className='formularioRegistroEntero' onSubmit={loginSubmit}>
         <div className='registroNombre'>
-          <input
+          <input id='nombreRegistro'
             type='text'
-            className=''
             placeholder='Nombre'
             name='nombre'
             value={nombre}
@@ -76,9 +77,9 @@ export const RegisterForm = () => {
           />
         </div> */}
         <div className='registroCorreo'>
-          <input
+          <input id='nombreRegistro'
             type='text'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Correo'
             name='email'
             value={email}
@@ -86,9 +87,9 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='registroContrasena'>
-          <input
+          <input id='nombreRegistro'
             type='password'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Contraseña'
             name='password'
             value={password}
@@ -96,9 +97,10 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='registroContrasena'>
-          <input
+          <input id='nombreRegistro'
+          className="inputContrasenaRegistro"
             type='password'
-            className=''
+            
             placeholder='Repetir contraseña'
             //name='password'
             //value={password}
@@ -106,11 +108,24 @@ export const RegisterForm = () => {
           />
         </div>
 
-        { <div className='eresSocio'>
+         <div className='eresSocio'>
         <label for="eresSocio"> Soy socio</label>
-        <input type="checkbox" id="eresSocio"  value="Socio"/>
-
-        </div> }
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
+        </div> 
+        <div className='eresSocio'>
+        
+        <Link to='/condiciones'> Aceptar términos legales</Link>
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
+      
+        </div> 
 
 
 
@@ -136,9 +151,14 @@ export const RegisterForm = () => {
         </div> */}
 
         
-        <div className='botonRegistro'>
-          <input type='submit' className='' value='REGISTRARSE' />
-        </div>
+<div className='botonRegistrarse'>
+        <button class="botonAmarillo">
+        <p className='botonAcceder'>REGISTRARSE</p>  
+        </button>
+</div>
+
+
+        
       </form>
       {mensaje}
     </div>

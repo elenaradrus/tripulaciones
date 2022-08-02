@@ -10,3 +10,5 @@ export * from './CategoriaPage';
 export * from './Page404';
 export * from './PerfilPage';
 export * from './Progreso';
+export * from './RespuestasPage';
+

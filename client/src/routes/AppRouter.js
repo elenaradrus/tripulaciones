@@ -12,6 +12,7 @@ import {
   TutorialesPage,
   Progreso
 } from '../components/pages';
+import RespuestasPage from '../components/pages/RespuestasPage';
 
 export const AppRouter = () => {
   return (
@@ -26,8 +27,10 @@ export const AppRouter = () => {
         <Route path='tutoriales' element={<TutorialesPage />} />;
         <Route path='noencontrada' element={<Page404 />} />;
         <Route path='perfil' element={<PerfilPage />} />;
+        <Route path='respuestas' element={<RespuestasPage />} />;
         <Route path='/*' element={<Navigate to='noencontrada' />} />;
         <Route path='/progreso' element={<Progreso />} />;
+
       </Routes>
       <BottomBar />
     </>
