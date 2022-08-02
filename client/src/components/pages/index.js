@@ -9,3 +9,4 @@ export * from './PreguntaPage';
 export * from './CategoriaPage';
 export * from './Page404';
 export * from './PerfilPage';
+export * from './RespuestasPage';
