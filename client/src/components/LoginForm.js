@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-
 import { useForm } from '../hooks';
 import { Button } from './Button';
 
@@ -54,7 +53,8 @@ export const LoginForm = () => {
 
       <form className='formularioLogin' onSubmit={loginSubmit}>
         <div className='inputCorreo'>
-          <label for='html'>Usuario</label>
+        <label for="Usuario">Usuario 
+       </label>
 
           <input
             type='email'
@@ -65,7 +65,10 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
+       
         <div className='inputContrasena'>
+        <label for="Contrasena">Contraseña 
+       </label>
           <input
             type='password'
             className=''
@@ -75,21 +78,32 @@ export const LoginForm = () => {
             onChange={onInputChange}
           />
         </div>
-        {/* esto es el maldito switch */}
-        <div className='checkYLabel'>
-          <input className='recordarContrasena' type='checkbox' id='switch' />
-          <label for='switch'>Recordar contraseña</label>
-        </div>
-        <div className='botonLogin'>
-          <input type='submit' className='' value='Login' />
-        </div>
+        <div className='checkYLabel'>    
+        <div className='contenedorSwitch'> 
+        <p className='recordarContrasena' >Recordar contarseña</p>
+
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+          </div>
+          
+          
+          
+          
+{/*           <label for='switch'>Recordar contraseña</label>
+ */}        </div>
+
+        <button class="botonAmarillo">
+        <p className='botonAcceder'>ACCEDER</p>  
+        </button>
       </form>
 
       <div className='llevarAlRegistro'>
-        ¿PRIMERA VEZ? <br></br>
-      </div>
-      <Link to='registro'>REGÍSTRATE</Link>
+        ¿Primera vez?      
+      
+      <Link to='registro'> Regístrate</Link>
       {mensaje}
+    </div>
     </div>
   );
 };
