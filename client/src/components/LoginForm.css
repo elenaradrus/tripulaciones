@@ -75,6 +75,7 @@ height: 64px;
   display: flex;
   margin: 10px;
   flex-direction: column;
+  color: white;
 }
 
 .checkYLabel{

@@ -94,7 +94,7 @@ export const LoginForm = () => {
 {/*           <label for='switch'>Recordar contraseña</label>
  */}        </div>
 
-        <button class="btn btn--primary btn-medium orange">
+        <button class="botonAmarillo">
         <p className='botonAcceder'>ACCEDER</p>  
         </button>
       </form>

@@ -53,6 +53,7 @@ export const RegisterForm = () => {
   return (
     <div className='contenedorGrandeRegistro'>
       <div className='mensajePrincipal'>
+      <h2 className='mayusculas'>FORMULARIO DE NUEVO REGISTRO</h2>
         <h3>¡Estás a un paso de la digitalización!</h3>
       </div>
       <form className='formularioRegistroEntero' onSubmit={loginSubmit}>
@@ -76,7 +77,7 @@ export const RegisterForm = () => {
           />
         </div> */}
         <div className='registroCorreo'>
-          <input
+          <input id='nombreRegistro'
             type='text'
             className='inputContrasenaRegistro'
             placeholder='Correo'
@@ -86,7 +87,7 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='registroContrasena'>
-          <input
+          <input id='nombreRegistro'
             type='password'
             className='inputContrasenaRegistro'
             placeholder='Contraseña'
@@ -96,7 +97,8 @@ export const RegisterForm = () => {
           />
         </div>
         <div className='registroContrasena'>
-          <input className="inputContrasenaRegistro"
+          <input id='nombreRegistro'
+          className="inputContrasenaRegistro"
             type='password'
             
             placeholder='Repetir contraseña'
@@ -108,14 +110,21 @@ export const RegisterForm = () => {
 
          <div className='eresSocio'>
         <label for="eresSocio"> Soy socio</label>
-        <input type="checkbox" id="eresSocio"  value="Socio"/>
-
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
         </div> 
         <div className='eresSocio'>
         
-        <Link to='condiciones'> Aceptar términos legales</Link>
-        <input type="checkbox" id="eresSocio"  value="Socio"/>
-
+        <Link to='/condiciones'> Aceptar términos legales</Link>
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
+      
         </div> 
 
 
@@ -143,7 +152,7 @@ export const RegisterForm = () => {
 
         
 <div className='botonRegistrarse'>
-        <button class="btn btn--primary btn-medium orange">
+        <button class="botonAmarillo">
         <p className='botonAcceder'>REGISTRARSE</p>  
         </button>
 </div>
