@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import { useFetchPregunta } from '../../hooks';
 import { Button } from '../Button';
@@ -8,7 +8,7 @@ import './PreguntaPage.css';
 
 export const PreguntaPage = () => {
   const [contador, setContador] = useState(0);
-
+  const navigate = useNavigate();
   const { data } = useFetchPregunta();
   let pregunta = data[contador];
 
@@ -18,7 +18,7 @@ export const PreguntaPage = () => {
     }
   };
   const handleOnClickResultado = () => {
-    return <Navigate to='respuestas' />;
+    navigate('/respuestas')
   };
   return (
     <>
@@ -36,7 +36,7 @@ export const PreguntaPage = () => {
         <div>
           <PreguntaCard {...pregunta} />
         </div>
-      
+        
         <div className='boton_siguiente'></div>
       </div>
     </>
