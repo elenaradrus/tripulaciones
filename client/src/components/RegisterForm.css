@@ -35,6 +35,11 @@
 .eresSocio{
     display: flex;
     gap: 15px;
+    color: white;
+}
+
+.eresSocio a {
+    color: white;
 }
 
 .botonAmarillo {
