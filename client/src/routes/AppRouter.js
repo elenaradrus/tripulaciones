@@ -10,6 +10,7 @@ import {
   PreguntaPage,
   TestPage,
   TutorialesPage,
+  Progreso
 } from '../components/pages';
 
 export const AppRouter = () => {
@@ -26,6 +27,7 @@ export const AppRouter = () => {
         <Route path='noencontrada' element={<Page404 />} />;
         <Route path='perfil' element={<PerfilPage />} />;
         <Route path='/*' element={<Navigate to='noencontrada' />} />;
+        <Route path='/progreso' element={<Progreso />} />;
       </Routes>
       <BottomBar />
     </>

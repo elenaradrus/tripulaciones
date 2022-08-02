@@ -23,9 +23,12 @@ export const TestPage = () => {
       </div>
       <div className='testPageContainer'>
         <div className='imageTest'>
-          <img className='testPageImg' src={imagen} alt={nombre} />
+          <img className='testPageImg' src='/images/tutorialEmpezar.png' alt={nombre} />
         </div>
-        <div className='instructions'>Instrucciones de texto</div>
+        <div className='instructions'>
+          Aprende a identificar mails fraudulentos y a prevenir las estafas online.
+          En el siguiente jercicio deberás ecoger correctamente entre cuatro opciones.
+        </div>
       </div>
 
       <div className='buttonTest'>
