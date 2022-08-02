@@ -27,12 +27,12 @@ const getPregunta = async (req, res) => {
   }
 };
 const createPregunta = async (req, res) => {
-  const { detalle, texto, opcion1, opcion2, opcion3, opcion4, respuesta } =
+  const { imagen, texto, opcion1, opcion2, opcion3, opcion4, respuesta } =
     req.body;
 
   try {
     const pregunta = new Pregunta({
-      detalle,
+      imagen,
       texto,
       opcion1,
       opcion2,

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFetchOneTest } from '../../hooks';
 import { Button } from '../Button';
 import { PreguntaCard } from '../PreguntaCard';
@@ -8,27 +8,38 @@ import './TestPage.css'
 export const TestPage = () => {
   const { test } = useParams();
   const { data } = useFetchOneTest(test);
-  console.log(data);
+  const navigate = useNavigate();
   const { imagen, nombre, pregunta } = data;
   const handleOnClick = () => {
-    console.log(pregunta);
+    navigate(`../../../pregunta/${pregunta}`, { replace: true });
   };
   return (
     <>
-      <h1>Título del test</h1>
-      <div className='imageTest'>
-        <img src={imagen} alt={nombre} />
+      <div className='titleTestPage'>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.82043 24L20.2649 8V16.8711L39.8204 16.8889V31.1111H20.2649V40L7.82043 24Z" fill="#FF9E0F" stroke="#FF9E0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h2>Detecta el...</h2>
       </div>
-      <div className='instructions'>Instrucciones de texto</div>
+      <div className='testPageContainer'>
+        <div className='imageTest'>
+          <img className='testPageImg' src='/images/tutorialEmpezar.png' alt={nombre} />
+        </div>
+        <div className='instructions'>
+          Aprende a identificar mails fraudulentos y a prevenir las estafas online.
+          En el siguiente jercicio deberás ecoger correctamente entre cuatro opciones.
+        </div>
+      </div>
+
       <div className='buttonTest'>
         <Button
           onClick={handleOnClick}
-          buttonColor='red'
+          buttonColor='orange'
           buttonSize='large'
           buttonStyle='primary'
         >
           {/* {nombre} */}
-          <p className='textStartTest'>Empezar</p>
+          <p className='textStartTest'>Comenzar</p>
         </Button>
       </div>
 

@@ -1,6 +1,7 @@
 const { compare } = require('../helpers/handleBcrypt');
 const { httpError } = require('../helpers/handleError');
 const { generarJWT } = require('../helpers/handleJwt');
+const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 const login = async (req, res) => {
@@ -32,4 +33,26 @@ const login = async (req, res) => {
     httpError(res, err);
   }
 };
-module.exports = { login };
+const revToken = async (req, res) => {
+  let token = null;
+  let authorization = req.get('authorization');
+
+  if (authorization && authorization.startsWith('Bearer')) {
+    token = authorization.substring(7);
+  }
+  const decodeToken = jwt.verify(token, process.env.JWT_SECRET);
+  if (!token || !decodeToken.user_id) {
+    return res
+      .status(401)
+      .json({ ok: false, msg: 'token inexistente o no válido' });
+  }
+  const { user_id, nombre } = decodeToken;
+
+  token = await generarJWT(user_id, nombre);
+  try {
+    res.json({ msg: 'Todo ok', token, user_id, nombre });
+  } catch (err) {
+    httpError(res, err);
+  }
+};
+module.exports = { login, revToken };

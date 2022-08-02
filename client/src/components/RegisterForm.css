@@ -1,0 +1,130 @@
+
+
+
+    .mensajePrincipal {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .mayusculas{
+        padding-left: 30px;
+    }
+
+
+.contenedorGrandeRegistro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    gap: 30px;
+    background: rgb(31, 50, 98);
+    background: linear-gradient(90deg, rgba(31, 50, 98, 1) 0%, rgba(74, 77, 155, 1) 31%, rgba(73, 188, 196, 1) 100%);
+  
+}
+
+.botonRegistro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+}
+
+.eresSocio{
+    display: flex;
+    gap: 15px;
+}
+
+.botonAmarillo {
+    width: 182px;
+    height: 64px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #FF9E0F;
+    font-family: 'Atkinson Hyperlegible';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonAcceder {
+    color: #1F3262;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    flex-direction: column-reverse;
+}
+
+#nombreRegistro{
+    width: 275px;
+}
+
+.registroApellidos{
+    margin-bottom: 10px;
+    border-color: #4A4D9B;
+}
+.registroCorreo{
+    margin-bottom: 10px;
+    border-color: #4A4D9B;
+}
+
+.registroContrasena{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: #4A4D9B;
+    
+}
+
+.registroDireccion{
+    margin-bottom: 10px;
+    border-color: #4A4D9B;
+}
+
+.registroTelefono{
+    margin-bottom: 10px;
+    border-color: #4A4D9B;
+ 
+}
+
+.botonRegistrarse{
+    display: flex;
+}
+
+
+
+/* INPUT, PERO LO ESTÁ CAMBIANDO A TODOS!!!!! INCLUSO A LOS BOTONES! */
+input{
+    border-color: #4A4D9B;    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 10px;
+}
+/* Esto es para que desapareezca el place holder al escribir */
+input:focus::placeholder{
+    color: transparent;
+}
+
+input::placeholder{
+    color: black;
+    transition:color 0.3s ease;
+}
+
+
+
+.formularioRegistroEntero {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}

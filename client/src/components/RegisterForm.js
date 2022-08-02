@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks';
+import { Link } from 'react-router-dom';
 
 import './RegisterForm.css';
 export const RegisterForm = () => {
@@ -50,19 +51,22 @@ export const RegisterForm = () => {
     }
   };
   return (
-    <>
-      <form onSubmit={loginSubmit}>
-        <div className=''>
-          <input
+    <div className='contenedorGrandeRegistro'>
+      <div className='mensajePrincipal'>
+      <h2 className='mayusculas'>FORMULARIO DE NUEVO REGISTRO</h2>
+        <h3>¡Estás a un paso de la digitalización!</h3>
+      </div>
+      <form className='formularioRegistroEntero' onSubmit={loginSubmit}>
+        <div className='registroNombre'>
+          <input id='nombreRegistro'
             type='text'
-            className=''
             placeholder='Nombre'
             name='nombre'
             value={nombre}
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+       {/*  <div className='registroApellidos'>
           <input
             type='text'
             className=''
@@ -71,28 +75,61 @@ export const RegisterForm = () => {
             value={apellidos}
             onChange={onInputChange}
           />
-        </div>
-        <div className=''>
-          <input
+        </div> */}
+        <div className='registroCorreo'>
+          <input id='nombreRegistro'
             type='text'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Correo'
             name='email'
             value={email}
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
-          <input
+        <div className='registroContrasena'>
+          <input id='nombreRegistro'
             type='password'
-            className=''
+            className='inputContrasenaRegistro'
             placeholder='Contraseña'
             name='password'
             value={password}
             onChange={onInputChange}
           />
         </div>
-        <div className=''>
+        <div className='registroContrasena'>
+          <input id='nombreRegistro'
+          className="inputContrasenaRegistro"
+            type='password'
+            
+            placeholder='Repetir contraseña'
+            //name='password'
+            //value={password}
+            //onChange={onInputChange}
+          />
+        </div>
+
+         <div className='eresSocio'>
+        <label for="eresSocio"> Soy socio</label>
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
+        </div> 
+        <div className='eresSocio'>
+        
+        <Link to='/condiciones'> Aceptar términos legales</Link>
+        <div className='contenedorSwitch'> 
+          <label class="switch"> 
+          <input type="checkbox"/>
+          <span class="slider round"></span></label>
+        </div>
+      
+        </div> 
+
+
+
+       {/*  <div className='registroDireccion'>
           <input
             type='text'
             className=''
@@ -101,8 +138,8 @@ export const RegisterForm = () => {
             value={direccion}
             onChange={onInputChange}
           />
-        </div>
-        <div className=''>
+        </div> */}
+       {/*  <div className='registroTelefono'>
           <input
             type='text'
             className=''
@@ -111,12 +148,19 @@ export const RegisterForm = () => {
             value={telefono}
             onChange={onInputChange}
           />
-        </div>
-        <div className=''>
-          <input type='submit' className='' value='Login' />
-        </div>
+        </div> */}
+
+        
+<div className='botonRegistrarse'>
+        <button class="botonAmarillo">
+        <p className='botonAcceder'>REGISTRARSE</p>  
+        </button>
+</div>
+
+
+        
       </form>
       {mensaje}
-    </>
+    </div>
   );
 };

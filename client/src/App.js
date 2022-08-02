@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 // import './App.css';
 import { BottomBar } from './components/BottomBar';
 
@@ -7,28 +7,36 @@ import {
   HomePage,
   LoginPage,
   LogrosPage,
+  PreguntaPage,
   RegisterPage,
   TestPage,
   TutorialesPage,
 } from './components/pages';
 import { CategoriaPage } from './components/pages/CategoriaPage';
+import { CondicionesPage } from './components/pages/CondicionesPage';
 import { UserProvider } from './context/UserProvider';
+import { AppRouter } from './routes/AppRouter';
+import { PrivateRoute } from './routes/PrivateRoute';
+
 
 function App() {
   return (
     <UserProvider>
       <Routes>
-        <Route path='/' element={<HomePage />} />;
-        <Route path='login' element={<LoginPage />} />;
+        <Route path='/' element={<LoginPage />} />;
         <Route path='registro' element={<RegisterPage />} />;
-        <Route path='aprendamos' element={<AprendamosPage />} />;
-        <Route path='aprendamos/:id' element={<CategoriaPage />} />;
-        <Route path='aprendamos/:id/:test' element={<TestPage />} />;
-        <Route path='logros' element={<LogrosPage />} />;
-        <Route path='tutoriales' element={<TutorialesPage />} />;
-        <Route path='/*' element={<HomePage />} />;
+        <Route path='condiciones' element={<CondicionesPage />} />;
+
+        <Route
+          path='/*'
+          element={
+            <PrivateRoute>
+              <AppRouter />
+            </PrivateRoute>
+          }
+        />
+        ;
       </Routes>
-      <BottomBar />
     </UserProvider>
   );
 }
