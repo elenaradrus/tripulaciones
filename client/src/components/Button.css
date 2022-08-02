@@ -55,7 +55,7 @@
 .btn--medium:hover,
 .btn--mobile:hover {
     transition: all 0.3s ease-out;
-    background: #fff;
+    background: #FF9E0F;
     color: #242424;
 }
 
@@ -84,6 +84,11 @@
 
 .orange {
     background: #FF9E0F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.red {
+    background: #FF0000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }

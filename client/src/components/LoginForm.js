@@ -4,7 +4,6 @@ import { UserContext } from '../context/UserContext';
 import { useForm } from '../hooks';
 import { Button } from './Button';
 
-
 import './LoginForm.css';
 export const LoginForm = () => {
   const { setUser } = useContext(UserContext);
@@ -46,11 +45,11 @@ export const LoginForm = () => {
 
   return (
     <div className='contenedorLoginEntero'>
-     <img
+      <img
         className='loginLogo'
         src='/images/logoEmancipatic.png'
         alt='young female'
-      /> 
+      />
 
       <form className='formularioLogin' onSubmit={loginSubmit}>
         <div className='inputCorreo'>
