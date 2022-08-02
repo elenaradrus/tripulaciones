@@ -23,15 +23,11 @@ export const HomePage = () => {
           <h3>¡Felicidades!</h3>
           <p className='texto'>Llevas 5 días seguidos <br /> de lecciones</p>
         </figure>
-        <div className='recomendaciones'>Recomendaciones</div>
-        <JuegoCard id={'62e434e6e54dd6a34c831d25'} />
-        <JuegoCard id={'62e434e6e54dd6a34c831d28'} />
-      </div>
-
-      <div className='recomendaciones'>
-        <h2>
-          Recomendaciones
-        </h2>
+        <div className='recomendaciones'>
+          <h2 className='textRecomendaciones'>Te recomendamos</h2>
+          <JuegoCard id={'62e434e6e54dd6a34c831d25'} />
+          <JuegoCard id={'62e434e6e54dd6a34c831d28'} />
+        </div>
       </div>
 
     </div>
