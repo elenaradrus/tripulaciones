@@ -98,16 +98,6 @@ export const LoginForm = () => {
         <p className='botonAcceder'>ACCEDER</p>  
         </button>
       </form>
-      {/* <div>
-        <Button
-          onClick={signInWithGoogle}
-          buttonStyle='btn--primary'
-          buttonColor='blue'
-          buttonSize='large'
-        >
-          Login con Google
-        </Button>
-      </div> */}
 
       <div className='llevarAlRegistro'>
         ¿Primera vez?      

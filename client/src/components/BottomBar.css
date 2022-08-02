@@ -8,6 +8,8 @@
     background-color: white;
     padding-top: 1rem;
     margin-left: -.5rem;
+    border-radius: 3rem 3rem 0rem 0rem;
+    box-shadow: -5px -20px 45px -34px rgba(189,189,189,1);
 
 }
 
