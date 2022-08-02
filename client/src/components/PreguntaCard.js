@@ -22,7 +22,7 @@ export const PreguntaCard = ({
     <>
       <div className='container-questions'>
         <center>
-          <img src={imagen} alt='imagen' />
+          <img className='imagenPreguntaUno' src='/images/usurpacionIdentidad.png' alt='imagen'/>
         </center>
         <div className='containerText'>
           <p className='questionDetail'>{texto}</p>

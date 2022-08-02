@@ -80,7 +80,7 @@ export const LoginForm = () => {
         </div>
         <div className='checkYLabel'>    
         <div className='contenedorSwitch'> 
-        <p className='recordarContrasena' >Recordar contarseña</p>
+        <p className='recordarContrasena' >Recordar contraseña</p>
 
           <label class="switch"> 
           <input type="checkbox"/>
