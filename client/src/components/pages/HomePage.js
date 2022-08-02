@@ -1,3 +1,4 @@
+import { JuegoCard } from '../JuegoCard';
 import './HomePage.css';
 export const HomePage = () => {
   return (
@@ -10,6 +11,8 @@ export const HomePage = () => {
         </figure>
         <p className='texto'>FELICIDADES POR JUGAR 5 DÍAS SEGUIDOS</p>
         <div className='recomendaciones'>Recomendaciones</div>
+        <JuegoCard id={'62e434e6e54dd6a34c831d25'} />
+        <JuegoCard id={'62e434e6e54dd6a34c831d28'} />
       </div>
     </div>
   );

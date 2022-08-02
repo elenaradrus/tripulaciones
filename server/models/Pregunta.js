@@ -4,7 +4,7 @@ const { Schema, model } = mongoose;
 // El esquema
 const preguntaSchema = new Schema(
   {
-    detalle: { type: String },
+    imagen: { type: String },
     texto: { type: String },
     opcion1: { type: String },
     opcion2: { type: String },
