@@ -1,0 +1,39 @@
+.containerProgreso {
+    margin-bottom: 10rem;
+}
+
+.weekCompleted,
+.textDiaConsecutivo,
+.containerimagenSemana,
+.desbloqueado,
+.containerBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.textDiaConsecutivo,
+.desbloqueado {
+    text-align: center;
+}
+
+.imagenSilueta {
+    height: 20rem;
+}
+
+.btnProgreso {
+    text-transform: uppercase;
+    border-style: none;
+    background: #FF9E0F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 8px 16px;
+    width: 182px;
+    height: 64px;
+    font-weight: 900;
+    line-height: 1.5rem;
+    color: #1F3262;
+}
+
+.containerBtn {
+    margin-top: 2.5rem;
+}
