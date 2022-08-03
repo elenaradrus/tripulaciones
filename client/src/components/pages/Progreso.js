@@ -4,6 +4,10 @@ export const Progreso = () => {
 
     return (
         <div className='containerProgreso'>
+            <div className='headerCompletadoProgreso'>
+                <h2 className='progresoText'>Completado</h2>
+            </div>
+
             <div className='weekCompleted'>
                 <div>
                     <img className='imagenSemana' src='/images/semana.png' alt="semana" />
@@ -20,7 +24,7 @@ export const Progreso = () => {
             <h3 className='desbloqueado'>Has desbloqueado el Nivel 2 <br />en Navega Seguro</h3>
 
             <div className='containerBtn'>
-                <button className='btnProgreso'>Sigue <br/>Aprendiendo</button>
+                <button className='btnProgreso'>Sigue <br />Aprendiendo</button>
             </div>
 
 
