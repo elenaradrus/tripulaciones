@@ -24,20 +24,17 @@ export const PreguntaPage = () => {
     <>
       <div className='questionsContainer'>
         <h2 className='numPregunta'>
-        <Button buttonColor='green' onClick={handleOnClickResultado}>
-          Ver resultado
-        </Button>
           Pregunta {contador + 1}/{data.length}
-          <Button onClick={handleOnClick}>
-            <img src='/images/flechaderecha.png' alt='me gustas' />
-          </Button>
+          <button className='btnSiquientePregunta' onClick={handleOnClick}>
+            <img className='flechaSiguientePregunta' src='/images/flechaderecha.png' alt='me gustas' />
+          </button>
         </h2>
 
         <div>
           <PreguntaCard {...pregunta} />
         </div>
-        
-        <div className='boton_siguiente'></div>
+
+
       </div>
     </>
   );

@@ -60,3 +60,10 @@ body{
         width: 50%;
     }
 }
+
+.containerBtnVerResultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from './Button';
 import './PreguntaCard.css';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const PreguntaCard = ({
   imagen,
@@ -18,11 +19,17 @@ export const PreguntaCard = ({
   const [colorBoton3, setColorBoton3] = useState('blue');
   const [colorBoton4, setColorBoton4] = useState('blue');
 
+  const navigate = useNavigate();
+
+  const handleOnClickResultado = () => {
+    navigate('/respuestas')
+  };
+
   return (
     <>
       <div className='container-questions'>
         <center>
-          <img className='imagenPreguntaUno' src='/images/usurpacionIdentidad.png' alt='imagen'/>
+          <img className='imagenPreguntaUno' src='/images/usurpacionIdentidad.png' alt='imagen' />
         </center>
         <div className='containerText'>
           <p className='questionDetail'>{texto}</p>
@@ -138,7 +145,12 @@ export const PreguntaCard = ({
             {opcion4}
           </Button>
         </div>
-        <div></div>
+        <div className='containerBtnVerResultado'>
+          <button className='btnVerResultado' buttonColor='green' onClick={handleOnClickResultado}>
+            Ver resultado
+          </button>
+        </div>
+
       </div>
     </>
   );
