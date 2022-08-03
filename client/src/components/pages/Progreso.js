@@ -1,6 +1,13 @@
 import './Progreso.css'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const Progreso = () => {
+
+    const navigate = useNavigate();
+
+    const weeklyOnClick = () => {
+      navigate('/resultados2')
+    }
 
     return (
         <div className='containerProgreso'>
@@ -24,7 +31,7 @@ export const Progreso = () => {
             <h3 className='desbloqueado'>Has desbloqueado el Nivel 2 <br />en Navega Seguro</h3>
 
             <div className='containerBtn'>
-                <button className='btnProgreso'>Sigue <br />Aprendiendo</button>
+                <button className='btnProgreso' onClick={weeklyOnClick} >Sigue <br />Aprendiendo</button>
             </div>
 
 

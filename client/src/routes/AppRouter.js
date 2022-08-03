@@ -13,6 +13,7 @@ import {
   Progreso
 } from '../components/pages';
 import RespuestasPage from '../components/pages/RespuestasPage';
+import Resultados2Page from '../components/pages/Resultados2Page';
 
 export const AppRouter = () => {
   return (
@@ -30,6 +31,8 @@ export const AppRouter = () => {
         <Route path='respuestas' element={<RespuestasPage />} />;
         <Route path='/*' element={<Navigate to='noencontrada' />} />;
         <Route path='/progreso' element={<Progreso />} />;
+        <Route path='/resultados2' element={<Resultados2Page />} />;
+
 
       </Routes>
       <BottomBar />
