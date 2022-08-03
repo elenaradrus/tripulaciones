@@ -32,6 +32,11 @@
 .eresSocio {
     display: flex;
     gap: 15px;
+    color: white;
+}
+
+.eresSocio a {
+    color: white;
 }
 
 .botonAmarillo {
@@ -49,6 +54,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 
 .botonAcceder {
     color: #1F3262;

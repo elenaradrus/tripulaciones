@@ -12,20 +12,29 @@ function RespuestasPage() {
   }
 
   return (
-    <div>
+    <div className='contenedorTodo' >
         <h2 className='aprendamosTitle'>Completado</h2>
+        <img src='/images/5de6.PNG' alt='5de6' className='imagen5de6' />
 
-        <button onClick={weeklyOnClick}>CONTINUAR</button>
+        <p className='textoSuperado'>
+        ¡Test superado!
+        </p>
 
+        <div className='botonYellow'>
+        <button class="botonAmarillo">
+        <p className='botonAcceder'>VER RESPUESTAS</p>  
+        </button>
 
-
+        <div className='botonWhite'>
+        <button class="botonBlanco" onClick={weeklyOnClick}>
+    
+        <p className='botonAcceder'>CONTINUAR</p>  
+        </button>
+</div>
+</div>
 
 
     </div>
-
-
-
-
 
 
 
