@@ -25,7 +25,7 @@ export const RegisterForm = () => {
     try {
       let data = { nombre, apellidos, email, password, direccion, telefono };
 
-      await fetch('http://localhost:443/users', {
+      await fetch('${process.env.REACT_APP_URI_BASE}/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
