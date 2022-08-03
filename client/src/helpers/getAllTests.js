@@ -1,5 +1,5 @@
 export const getAllTests = async () => {
-  const miURL = `http://localhost:443/tests`;
+  const miURL = `${process.env.REACT_APP_URI_BASE}/tests`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const tests = data.map((test) => ({

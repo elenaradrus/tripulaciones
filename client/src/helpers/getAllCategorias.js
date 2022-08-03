@@ -1,5 +1,5 @@
 export const getAllCategorias = async () => {
-  const miURL = `http://localhost:443/categorias`;
+  const miURL = `${process.env.REACT_APP_URI_BASE}/categorias`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const categorias = data.map((categoria) => ({

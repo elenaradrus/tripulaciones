@@ -1,5 +1,5 @@
 export const getAllProvincias = async () => {
-  const miURL = `http://localhost:443/provincias`;
+  const miURL = `${process.env.REACT_APP_URI_BASE}/provincias`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const provincias = data.map((provincia) => ({

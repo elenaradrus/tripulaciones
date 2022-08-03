@@ -85,6 +85,13 @@
     border-radius: 10px;
 }
 
+.white {
+    background: #FAFAFA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: black;
+}
+
 .primary {
     background-color: #242424;
     color: #fff;

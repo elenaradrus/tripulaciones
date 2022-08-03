@@ -1,5 +1,5 @@
 export const getAllTutorials = async () => {
-  const miURL = `http://localhost:443/tutorials`;
+  const miURL = `${process.env.REACT_APP_URI_BASE}/tutorials`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const tutorials = data.map((tutorial) => ({

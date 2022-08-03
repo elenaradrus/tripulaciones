@@ -1,5 +1,5 @@
 export const checkJWT = async () => {
-  const miURL = 'http://localhost:443/auth/revToken';
+  const miURL = `${process.env.REACT_APP_URI_BASE}/auth/revToken`;
   try {
     const tokenLS = await localStorage.getItem('token');
     if (tokenLS) {

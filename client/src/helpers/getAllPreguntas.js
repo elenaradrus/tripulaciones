@@ -1,5 +1,5 @@
 export const getAllPreguntas = async () => {
-  const miURL = `http://localhost:443/preguntas`;
+  const miURL = `${process.env.REACT_APP_URI_BASE}/preguntas`;
   const resp = await fetch(miURL);
   const data = await resp.json();
   const preguntas = data.map((pregunta) => ({
