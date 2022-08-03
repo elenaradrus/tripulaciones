@@ -1,6 +1,6 @@
 import React from 'react'
 import './RespuestasPage.css';
-import {Navigate, useNavigate} from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 function RespuestasPage() {
@@ -11,12 +11,9 @@ function RespuestasPage() {
     navigate('/progreso')
   }
 
-
-
   return (
     <div className='contenedorTodo' >
         <h2 className='aprendamosTitle'>Completado</h2>
-
         <img src='/images/5de6.PNG' alt='5de6' className='imagen5de6' />
 
         <p className='textoSuperado'>
@@ -37,13 +34,7 @@ function RespuestasPage() {
 </div>
 
 
-
-
     </div>
-
-
-
-
 
 
 
