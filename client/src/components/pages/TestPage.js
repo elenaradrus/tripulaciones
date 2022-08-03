@@ -16,9 +16,10 @@ export const TestPage = () => {
   return (
     <>
       <div className='titleTestPage'>
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.82043 24L20.2649 8V16.8711L39.8204 16.8889V31.1111H20.2649V40L7.82043 24Z" fill="#FF9E0F" stroke="#FF9E0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M42 22.184C43.1046 22.184 44 23.0794 44 24.184V24.987C44 26.0916 43.1046 26.987 42 26.987H13.1931L19.5666 33.3605C20.3478 34.1417 20.3476 35.4085 19.5661 36.1894L18.9974 36.7577C18.2163 37.5383 16.9502 37.538 16.1694 36.757L5.41384 25.9996C4.63296 25.2186 4.63296 23.9524 5.41384 23.1714L16.1694 12.414C16.9502 11.633 18.2163 11.6327 18.9974 12.4133L19.5661 12.9816C20.3476 13.7625 20.3478 15.0292 19.5666 15.8105L13.1931 22.184H42Z" fill="#FF9E0F"/>
+</svg>
+
         <h2>Detecta el...</h2>
       </div>
       <div className='testPageContainer'>

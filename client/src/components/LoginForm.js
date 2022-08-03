@@ -17,7 +17,7 @@ export const LoginForm = () => {
     try {
       let data = { email, password };
 
-      await fetch('http://localhost:443/auth/login', {
+      await fetch(`${process.env.REACT_APP_URI_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -80,7 +80,7 @@ export const LoginForm = () => {
         </div>
         <div className='checkYLabel'>    
         <div className='contenedorSwitch'> 
-        <p className='recordarContrasena' >Recordar contarseña</p>
+        <p className='recordarContrasena' >Recordar contraseña</p>
 
           <label class="switch"> 
           <input type="checkbox"/>

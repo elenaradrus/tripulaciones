@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import { useFetchPregunta } from '../../hooks';
 import { Button } from '../Button';
@@ -8,7 +8,7 @@ import './PreguntaPage.css';
 
 export const PreguntaPage = () => {
   const [contador, setContador] = useState(0);
-
+  const navigate = useNavigate();
   const { data } = useFetchPregunta();
   let pregunta = data[contador];
 
@@ -18,26 +18,23 @@ export const PreguntaPage = () => {
     }
   };
   const handleOnClickResultado = () => {
-    return <Navigate to='respuestas' />;
+    navigate('/respuestas')
   };
   return (
     <>
       <div className='questionsContainer'>
         <h2 className='numPregunta'>
-        <Button buttonColor='green' onClick={handleOnClickResultado}>
-          Ver resultado
-        </Button>
           Pregunta {contador + 1}/{data.length}
-          <Button onClick={handleOnClick}>
-            <img src='/images/flechaderecha.png' alt='me gustas' />
-          </Button>
+          <button className='btnSiquientePregunta' onClick={handleOnClick}>
+            <img className='flechaSiguientePregunta' src='/images/flechaFinaDerecha.png' alt='me gustas' />
+          </button>
         </h2>
 
         <div>
           <PreguntaCard {...pregunta} />
         </div>
-        
-        <div className='boton_siguiente'></div>
+
+
       </div>
     </>
   );

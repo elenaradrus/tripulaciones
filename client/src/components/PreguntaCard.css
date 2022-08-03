@@ -4,7 +4,11 @@ body{
 
 }
 .container-questions {
-    height: 150vh;
+    height: 110vh;
+}
+
+.imagenPreguntaUno {
+    width: 100%;
 }
 
 
@@ -55,4 +59,19 @@ body{
         margin-top: 5rem;
         width: 50%;
     }
+}
+
+.containerBtnVerResultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container-questions {
+    margin-top: -1.5rem;
+}
+
+.containerText {
+    margin-top: -.7rem;
 }

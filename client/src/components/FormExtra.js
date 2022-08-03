@@ -88,7 +88,7 @@ export const FormExtra = () => {
         nivelEdu,
       };
 
-      await fetch(`http://localhost:443/users/${user._id}`, {
+      await fetch(`${process.env.REACT_APP_URI_BASE}/users/${user._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
