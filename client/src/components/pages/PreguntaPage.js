@@ -26,7 +26,7 @@ export const PreguntaPage = () => {
         <h2 className='numPregunta'>
           Pregunta {contador + 1}/{data.length}
           <button className='btnSiquientePregunta' onClick={handleOnClick}>
-            <img className='flechaSiguientePregunta' src='/images/flechaderecha.png' alt='me gustas' />
+            <img className='flechaSiguientePregunta' src='/images/flechaFinaDerecha.png' alt='me gustas' />
           </button>
         </h2>
 
