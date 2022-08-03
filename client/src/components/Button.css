@@ -50,14 +50,14 @@
     padding: 12px 64px;
     font-size: 20px;
 }
-
+/* 
 .btn--large:hover,
 .btn--medium:hover,
 .btn--mobile:hover {
     transition: all 0.3s ease-out;
     background: #FF9E0F;
     color: #242424;
-}
+} */
 
 .btn--wide:hover {
     color: #fff;
@@ -112,5 +112,5 @@
 }
 
 .green:hover {
-    background-color: green;
+    background-color: #25ce4a;
 }
